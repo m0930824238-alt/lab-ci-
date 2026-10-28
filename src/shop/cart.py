@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import Protocol
-import os
+
 
 class RateProvider(Protocol):
     """Джерело курсів валют: скільки гривень коштує 1 одиниця валюти."""
@@ -35,9 +35,6 @@ class Cart:
         if name not in self._items:
             raise KeyError(name)
         del self._items[name]
-
-
-
 
     def items_count(self) -> int:
         return sum(item.qty for item in self._items.values())
