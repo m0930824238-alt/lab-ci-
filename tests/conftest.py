@@ -1,10 +1,12 @@
 import pytest
 from shop.cart import Cart
 
+
 @pytest.fixture
 def empty_cart() -> Cart:
     """Фікстура: порожній кошик."""
     return Cart()
+
 
 @pytest.fixture
 def cart_with_items() -> Cart:
